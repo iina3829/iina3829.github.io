@@ -27,7 +27,7 @@
       top:0; left:0;
       width:100%;
       background-color: #222222;
-      border-bottom:1px solid var(--rule);
+      border-bottom:0px solid var(--rule);
       padding: 0.75rem 2rem;
       display:flex;
       justify-content:space-between;
@@ -50,7 +50,7 @@
 
     /* HERO with full-width image behind title */
     .hero{
-      margin-top: 56px; /* space for fixed top bar */
+      margin-top: 30px; /* space for fixed top bar 56 */
       min-height: 58vh;
       display:flex;
       align-items:center;
@@ -173,14 +173,14 @@
     .gallery-wrap{
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 2rem 3rem;
+      /*padding: 1rem 2rem 3rem;*/
     }
 
     .collage{
       position:relative;
       height: 520px;
-      border: 1px solid rgba(0,0,0,0.10);
-      background: #b9cbe0; /* similar light blue field */
+      /* border: 1px solid rgba(0,0,0,0.10);
+      background: #b9cbe0; /* similar light blue field */*/
       overflow:hidden;
     }
 
@@ -255,6 +255,119 @@
       .t5{ left: 52%; top: 34%; width: 42%; height: 18%; }
       .t6{ display:none; }
     }
+
+.social-section {
+  padding: 4rem 2rem;
+}
+
+.social-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  text-align: center;
+}
+
+.social-item p {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.social-item a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.social-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #000;
+  border: 0px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.85;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+/* This is for the media rows. Keep the same rhythm as zigzag: max width + spacing */
+  .media-section{
+    max-width: 1100px;
+    margin: 0 auto;
+    /*padding: 3rem 2rem;*/
+    /*padding: 0 2rem 3rem;*/
+  }
+
+  .media-grid{
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  /* 3 tiles per row, but with alternating uneven widths */
+  .media-row{
+    display: grid;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  /* alternating column weights (uneven grid) */
+  .media-row.w-a{ grid-template-columns: 1.6fr 1fr 1.2fr; }
+  .media-row.w-b{ grid-template-columns: 1fr 1.7fr 1.1fr; }
+  .media-row.w-c{ grid-template-columns: 1.2fr 1fr 1.6fr; }
+  .media-row.w-d{ grid-template-columns: 1.1fr 1.5fr 1fr; }
+
+  /* tile styling matches your imgbox vibe */
+  .media-tile{
+    border: 1px solid rgba(0,0,0,0.15);
+    background: #eee;
+    overflow: hidden;
+    display: block;
+    min-height: 180px; /* smaller than zigzag */
+    max-height: 180px;
+  }
+
+  .media-tile img,
+  .media-tile video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .media-tile:hover{
+    opacity: 0.9;
+  }
+
+  /* Responsive: stack to 1 column on small screens */
+  @media (max-width: 900px){
+    .media-section{ padding: 0 2rem 2.5rem; }
+    .media-row.w-a,
+    .media-row.w-b,
+    .media-row.w-c,
+    .media-row.w-d{
+      grid-template-columns: 1fr;
+    }
+    .media-tile{
+      min-height: 220px;
+    }
+  }
+
+
   </style>
 </head>
 
@@ -267,10 +380,13 @@
     <div class="social-links">
       <!-- replace with your icon files -->
       <a href="https://www.instagram.com/in.ad.infinitum/" target="_blank" aria-label="Instagram">
-        <img src="instagram.svg" alt="Instagram">
+        <img src="Instagram_Glyph_White.png" alt="Instagram">
       </a>
       <a href="https://www.facebook.com/in.ad.infinitum" target="_blank" aria-label="Facebook">
-        <img src="facebook.svg" alt="Facebook">
+        <img src="Facebook_Logo_Secondary.png" alt="Facebook">
+      </a>
+        <a href="mailto:oileryhelsinki@gmail.com" target="_blank" aria-label="Mail">
+        <img src="mail-512.png" alt="Mail">
       </a>
     </div>
   </div>
@@ -282,8 +398,11 @@
       <div class="descriptionheader">
         <h1>AD INFINITUM</h1>
         <h2>Immersive Mirror Installation</h2>
-          Ad Infinitum is an immersive mirror installation that captivates you with its endless reflections of lights and visual arts. It's a walk‑in cube whose all interior surfaces are all mirrors. The result is an infinity mirror effect: the space appears boundless through endless reflections. 
-          Ad Infinitum is available for events and we are constantly searching for collaboration opportunities. 
+        <p>
+          Ad Infinitum is an immersive mirror installation that captivates you with its endless reflections of lights and visual arts. It is a walk-in mirror cube that dissolves its own boundaries. From the outside, it reflects its surroundings and blends into the environment. Once inside, mirrors on every surface - walls, ceiling, and floor - create a fully enclosed infinity space. </p><p>
+
+          Light, video, and sound come together to form a continuously shifting experience. Each visitor enters alone or in small groups, closing the door behind them and stepping into a self-contained world of endless reflections.</p><p>
+          The cube is mobile, adaptable, and designed to host a wide range of visual and sonic artworks creating everything from subtle atmospheres to high-impact immersive moments.</p>
       </div>
     </div>
   </header>
@@ -298,9 +417,10 @@
             <video src="video_002.mp4" autoplay loop muted playsinline> </video>
         </div>
         <div class="panel">
-          <h3>MADE TO SPARK CONVERSATION</h3>
+          <h3>THE IMMERSIVE SPACE</h3>
           <p>
-            each piece is a gentle disruption—something that shifts attention, draws people together, and stays memorable.
+          Ad Infinitum is designed to be discovered. It attracts attention through reflection and curiosity, then rewards entry with a fully immersive interior experience.</p><p>
+          The mirrored exterior acts as camouflage, while the interior reveals a boundless space shaped by light, motion, and sound. Each installation invites visitors to pause, explore, and experience a moment of visual infinity that becomes a focal point for shared attention, documentation, and social interaction.
           </p>
         </div>
       </div>
@@ -310,42 +430,48 @@
         <div class="panel">
           <h3>COLLABORATION POSSIBILITIES</h3>
           <p>
-          The video work can be looping, durational, or reactive - generative or algorithmic approaches are welcome.
+       
+          Ad Infinitum is open to artistic collaboration across disciplines. The physical structure of the cube remains constant, while the content inside can be fully reimagined.
+
           </p>
           <p>
-          Collaboration with the broader production team is flexible and encouraged.
+            Artists, designers, and studios are invited to create custom video works, generative visuals, interactive systems, or soundscapes tailored to the infinity environment. Content may be looping, durational, reactive, or event-specific.
           </p>
           <p>
-          The installation’s form is fixed; the content is open. Sculptural works designed to be touched, played, and explored—inviting guests into shared moments.
+          Collaborations can range from single-artist installations to larger curatorial or production partnerships. The cube functions as a platform: a spatial canvas for immersive experimentation.
           </p>
         </div>
         <div class="imgbox">
-          <img src="zig2.jpg" alt="Gallery detail">
+          <img src="vj_elsainkeri_20250927_195537.jpg" alt=" ">
         </div>
       </div>
 
       <!-- Line 3: image - text -->
       <div class="row">
         <div class="imgbox">
-          <img src="zig3.jpg" alt="Event atmosphere">
+          <img src="20250927_204131.jpg" alt=" ">
         </div>
         <div class="panel">
           <h3>TECHNICAL SPECS</h3>
           <p>            
-          Video Content:<br>
-          Moving‑image content for four 85" displays. The piece can be abstract, figurative, generative, or interactive.
+          Visual system:<br>
+          Four interior 85” displays deliver synchronized moving-image content. Video can be abstract, figurative, generative, or interactive, depending on the project.
           </p>
           <p>
-          LED Programming:<br>
-          LED strips programmed to support—or react to—the rhythm and mood of the video and ambient sound.
+          Lighting:<br>
+          Integrated LED strips enhance the mirror effect and can be programmed to complement or respond to the visual and sonic content.
           </p>
           <p>
-          Sound Design:<br>
-          A soundscape that supports the visuals and makes effective use of the speaker array to be installed in the space.short events or longer installs. we help you choose the right piece and adapt it to your space.
+          Sound:<br>
+          A dedicated soundscape can be added, using an internal speaker setup to create an enveloping auditory layer that supports the visual experience.
           </p>
           <p>
-          Size: <br>
-          Requires x amount of space. 
+          Structure: <br>
+          Fully mirrored interior surfaces, including floor and ceiling. Enclosed door allows for a complete 360° infinity effect.
+          </p>
+           <p>
+          Footprint: <br>
+          Requires a dedicated floor area and access for transport and installation. Detailed specs available on request.
           </p>
         </div>
       </div>
@@ -353,36 +479,135 @@
       <!-- Line 4: text - image -->
       <div class="row reverse">
         <div class="panel">
-          <h3>EVENTS</h3>
+          <h3>EVENTS & RENTALS</h3>
           <p>
-            Ad Infinitum moves on wheels and can be transported & ordered to events. Contact us for more information.
+            Ad Infinitum is available for short-term and long-term rentals. The cube is mounted on wheels and can be transported to a wide range of venues.</p><p>
+            It is suitable for events, exhibitions, brand activations, festivals, private functions, and public installations. Content can be adapted for each occasion, from calm ambient works to bold, high-energy visuals.
+            </p><p>
+            For availability, logistics, and custom content options, please get in touch.
           </p>
         </div>
         <div class="imgbox">
-          <img src="zig4.jpg" alt="Installation closeup">
+          <img src="20250919_233749.jpg" alt=" ">
         </div>
       </div>
     </div>
-  </main>
+  
 
-  <!-- COLLAGE GALLERY (reference-like) -->
+  <section class="social-section">
+  <div class="social-grid">
+
+    <div class="social-item">
+      <div class="social-icon">
+        <img src="Instagram_Glyph_White.png" alt="Instagram">
+      </div>
+      <p>
+        Pic & video gallery on
+        <a href="https://www.instagram.com/in.ad.infinitum/" target="_blank">
+          Instagram
+        </a>
+      </p>
+    </div>
+
+    <div class="social-item">
+      <div class="social-icon">
+        <img src="Facebook_Logo_Secondary.png" alt="Facebook">
+      </div>
+      <p>
+        Events & display locations on
+        <a href="https://www.facebook.com/in.ad.infinitum" target="_blank">
+          Facebook events
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MEDIA GRID (3 items per row, uneven widths, image/video supported) -->
+<section class="media-section">
+  <div class="media-grid">
+
+    <!-- Row 1 -->
+    <div class="media-row w-a">
+      <a class="media-tile" href="#" aria-label="Media 1">
+        <img src="20250926_072149.jpg" alt="Media 1">
+       <!--  <video src="grid1.mp4" autoplay loop muted playsinline></video>-->
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 2">
+        <img src="20250926_071736.jpg" alt="Media 2">
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 3">
+        <img src="20250926_070405.jpg" alt="Media 3">
+      </a>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="media-row w-b">
+      <a class="media-tile" href="#" aria-label="Media 4">
+        <img src="20250926_073559.jpg" alt="Media 4">
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 5">
+       <img src="20250926_070457.jpg" alt="Media 5">
+       <!-- <video src="grid5.mp4" autoplay loop muted playsinline></video>-->
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 6">
+        <img src="vj_elsainkeri_20250927_184612.jpg" alt="Media 6">
+      </a>
+    </div>
+<p>(Lets make a better image gallery.) </p>
+    <!-- Row 3 
+    <div class="media-row w-c">
+      <a class="media-tile" href="#" aria-label="Media 7">
+        <img src="grid7.jpg" alt="Media 7">
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 8">
+        <img src="grid8.jpg" alt="Media 8">
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 9">
+        <video src="grid9.mp4" autoplay loop muted playsinline></video>
+      </a>
+    </div>
+
+    <!-- Row 4 
+    <div class="media-row w-d">
+      <a class="media-tile" href="#" aria-label="Media 10">
+        <video src="grid10.mp4" autoplay loop muted playsinline></video>
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 11">
+        <img src="grid11.jpg" alt="Media 11">
+      </a>
+      <a class="media-tile" href="#" aria-label="Media 12">
+        <img src="grid12.jpg" alt="Media 12">
+      </a>
+    </div>-->
+
+  </div>
+</section>
+
+
+  <!-- COLLAGE GALLERY (reference-like) 
   <section class="gallery-wrap">
     <div class="collage" aria-label="Image collage gallery">
-      <!-- Replace these with your real images -->
-      <div class="tile t1"><img src="collage1.jpg" alt="Artwork 1"></div>
-      <div class="tile t2"><img src="collage2.jpg" alt="Artwork 2"></div>
-      <div class="tile t3"><img src="collage3.jpg" alt="Artwork 3"></div>
-      <div class="tile t4"><img src="collage4.jpg" alt="Artwork 4"></div>
-      <div class="tile t5"><img src="collage5.jpg" alt="Artwork 5"></div>
-      <div class="tile t6"><img src="collage6.jpg" alt="Artwork 6"></div>
+      <!-- Replace these with your real images 
+      <div class="tile t1"><img src="20250926_072149.jpg" alt="Artwork 1"></div>
+      <div class="tile t2"><img src="20250926_071736.jpg" alt="Artwork 2"></div>
+      <div class="tile t3"><img src="20250926_070405.jpg" alt="Artwork 3"></div>
+      <div class="tile t4"><img src="20250926_073559.jpg" alt="Artwork 4"></div>
+      <div class="tile t5"><img src="20250926_070457.jpg" alt="Artwork 5"></div>
+      <div class="tile t6"><img src="vj_elsainkeri_20250927_184612.jpg" alt="Artwork 6"></div>
 
-      <!-- <div class="collage-label left">Instagram</div>
-      <div class="collage-label right">Behance</div>-->
-    </div>
-  </section>
+
+     </div>
+</section>   
+ -->
+
+ </main>
 
   <footer>
-    Contact us at <a href="mailto:contact@rentart.io">contact@rentart.io</a>
+    Contact us at <a href="mailto:oileryhelsinki@gmail.com">oileryhelsinki (at) gmail.com</a>
+    <br>
+    Ad Infinitum, Helsinki
   </footer>
 </body>
 </html>
